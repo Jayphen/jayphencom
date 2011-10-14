@@ -13,6 +13,22 @@ body
   margin: 0
   border-top: 1px solid #9cb8b3
   
+nav
+  a, a:visited
+    color: darken(#aac8c3, 5%)
+    text-decoration: none
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.2)
+    display: block
+    padding: 3px
+    -webkit-transition: all 0.3s ease-out
+    background: rgba(217, 205, 176, 0.3)
+    +box-shadow(1px 1px 2px rgba(0,0,0,0.2), 0 0 1px rgba(0,0,0,0.1))
+    +border-radius(3px)
+    &:hover, &:active
+      color: darken(#aac8c3, 25%)
+      background: darken(rgba(217, 205, 176, 0.3), 10%)
+      +box-shadow(1px 1px 2px rgba(0,0,0,0.3), 0 0 1px rgba(0,0,0,0.2))
+  
 header
   +leader
   +offset(4)
@@ -27,7 +43,7 @@ header
     width: 168px
     height: 168px
     overflow: hidden
-    box-shadow: 0 0 2px #9cb8b3 inset
+    +box-shadow(1px 1px 5px #9cb8b3 inset, 1px 1px 2px rgba(255,255,255,0.4))
     margin: 0
     font-size: 36px
     float: left
@@ -45,20 +61,6 @@ header
       top: -3px
       margin-right: 20px
       float: left
-      a
-        color: #aac8c3
-        text-decoration: none
-        text-shadow: 0 1px 1px rgba(255,255,255,0.2)
-        display: block
-        padding: 3px
-        -webkit-transition: all 0.3s ease-out
-        background: rgba(217, 205, 176, 0.3)
-        +box-shadow(0 1px 2px rgba(0,0,0,0.2))
-        +border-radius(3px)
-        &:hover
-          color: darken(#aac8c3, 25%)
-          background: darken(rgba(217, 205, 176, 0.3), 10%)
-          +box-shadow(0 1px 2px rgba(0,0,0,0.3))
   
 #wrapper
   +container
@@ -76,19 +78,34 @@ header
     +adjust-font-size-to(13px, 1, 16px)
     color: darken(#5e594f, 10%)
     +text-shadow(0 1px 1px rgba(255,255,255,0.7))
-  section:last-of-type
-    +columns(12, -20px)
-    padding: 0 10px
-    background: rgba(255,255,255,0.4)
-    +border-radius(8px)
-    color: #655f54
-    h1
-      +adjust-font-size-to(48px, 1, 16px)
-      color: #75afa5
-      margin: 0
-      padding: 0
-      +padding-leader(1, 48px)
+
+.feature
+  +columns(12, -20px)
+  padding: 0 10px
+  background: rgba(255,255,255,0.4)
+  +box-shadow(1px 1px 1px lighten(#c8bfac, 5%) inset, 1px 1px 0 rgba(0,0,0,0.02))
+  +border-radius(8px)
+  color: #655f54
+  h1
+    +adjust-font-size-to(48px, 1, 16px)
+    color: #75afa5
+    margin: 0
+    padding: 0
+    +padding-leader(1, 48px)
+    font-weight: normal
+    +text-shadow(1px 1px 1px rgba(255,255,255,0.7))
+  p
+    +leader
+    margin-bottom: 0
+        
+.past
+  +columns(4, -14px, 0)
+  +trailer
+  h1
+    +leader(1, 22px)
+    +adjust-font-size-to(22px, 1, 16px)
+    & + h2
+      color: #aac8c3
       font-weight: normal
-    p
-      +leader
-      margin-bottom: 0
+      +adjust-font-size-to(18px, 1, 16px)
+      margin: 0
