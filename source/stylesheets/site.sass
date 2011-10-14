@@ -1,0 +1,59 @@
+@import compass
+@import _general/grid
+html
+  border-top: 23px solid #aac8c3
+body
+  font-family: sans-serif
+  text-align: center
+  background: url('i/wood.jpg') top left repeat
+  margin: 0
+  border-top: 1px solid #9cb8b3
+  
+header
+  +offset(4)
+  +leader
+  
+#wrapper
+  +container
+h1
+  background: #aac8c3
+  padding: 0
+  color: #bbd3cf
+  line-height: 168px
+  border-radius: 168px
+  width: 168px
+  height: 168px
+  overflow: hidden
+  box-shadow: 0 0 2px #9cb8b3 inset
+  margin: 0
+  -webkit-transition: color 0.8s ease-out
+  font-size: 36px
+  text-align: center
+  float: left
+  cursor: pointer
+h1:hover
+  color: lighten(#bbd3cf, 10%)
+    
+ul
+  margin: 0 0 0 20px
+  padding: 0
+  list-style: none
+  float: left
+  +leader(3)
+  li
+    position: relative
+    top: -3px
+    background: rgba(217, 205, 176, 0.3)
+    +box-shadow(0 1px 2px rgba(0,0,0,0.2))
+    +border-radius(3px)
+    margin-right: 20px
+    float: left
+    a
+      color: #aac8c3
+      text-decoration: none
+      text-shadow: 0 1px 1px rgba(255,255,255,0.2)
+      display: block
+      padding: 3px
+      -webkit-transition: color 0.5s ease-out
+      &:hover
+        color: darken(#aac8c3, 25%)

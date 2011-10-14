@@ -1,0 +1,27 @@
+// Grid dimensions
+$grid-width: 940px
+$grid-columns: 16
+
+// The amount of margin to apply to each side of a grid element
+$grid-gutter: 10px
+
+// The distance between the grid container and the first grid element
+$grid-outer-gutter: 10px
+
+// Use "pie-clearfix", "overflow", or "none"?
+$grid-clearfix: "pie-clearfix"
+
+// Center rows?
+$grid-centering: true
+
+// Include Lucid
+@import lucid
+
+// Output 4 CSS classes that Lucid uses as @extend "hooks"
++grid-init
+
+// Establish baseline grid
+$base-font-size: 16px
+$base-line-height: 24px
+$relative-font-sizing: true
++establish-baseline
