@@ -1,6 +1,9 @@
 @import compass
 @import _general/normalise
 @import _general/grid
+
+@import _module/tweet
+
 html
   border-top: 23px solid #aac8c3
   // background: image-url('http://griddle.it/940-16-10?horizontal=24&num=0&color=f9f9f9') center 1px repeat-y!important
@@ -14,53 +17,51 @@ header
   +leader
   +offset(4)
   +pie-clearfix
+  h1
+    background: #aac8c3
+    text-align: center
+    padding: 0
+    color: #bbd3cf
+    line-height: 168px
+    border-radius: 168px
+    width: 168px
+    height: 168px
+    overflow: hidden
+    box-shadow: 0 0 2px #9cb8b3 inset
+    margin: 0
+    font-size: 36px
+    float: left
+    cursor: pointer
+  h1:hover
+    color: lighten(#bbd3cf, 10%)
+  ul
+    margin: 0 0 0 20px
+    padding: 0
+    list-style: none
+    float: left
+    +leader(3)
+    li
+      position: relative
+      top: -3px
+      margin-right: 20px
+      float: left
+      a
+        color: #aac8c3
+        text-decoration: none
+        text-shadow: 0 1px 1px rgba(255,255,255,0.2)
+        display: block
+        padding: 3px
+        -webkit-transition: all 0.3s ease-out
+        background: rgba(217, 205, 176, 0.3)
+        +box-shadow(0 1px 2px rgba(0,0,0,0.2))
+        +border-radius(3px)
+        &:hover
+          color: darken(#aac8c3, 25%)
+          background: darken(rgba(217, 205, 176, 0.3), 10%)
+          +box-shadow(0 1px 2px rgba(0,0,0,0.3))
   
 #wrapper
   +container
-h1
-  background: #aac8c3
-  text-align: center
-  padding: 0
-  color: #bbd3cf
-  line-height: 168px
-  border-radius: 168px
-  width: 168px
-  height: 168px
-  overflow: hidden
-  box-shadow: 0 0 2px #9cb8b3 inset
-  margin: 0
-  -webkit-transition: color 0.8s ease-out
-  font-size: 36px
-  float: left
-  cursor: pointer
-h1:hover
-  color: lighten(#bbd3cf, 10%)
-    
-ul
-  margin: 0 0 0 20px
-  padding: 0
-  list-style: none
-  float: left
-  +leader(3)
-  li
-    position: relative
-    top: -3px
-    margin-right: 20px
-    float: left
-    a
-      color: #aac8c3
-      text-decoration: none
-      text-shadow: 0 1px 1px rgba(255,255,255,0.2)
-      display: block
-      padding: 3px
-      -webkit-transition: all 0.3s ease-out
-      background: rgba(217, 205, 176, 0.3)
-      +box-shadow(0 1px 2px rgba(0,0,0,0.2))
-      +border-radius(3px)
-      &:hover
-        color: darken(#aac8c3, 25%)
-        background: darken(rgba(217, 205, 176, 0.3), 10%)
-        +box-shadow(0 1px 2px rgba(0,0,0,0.3))
         
         
         
@@ -69,16 +70,25 @@ ul
   +columns(16, 0, none)
   section:first-of-type
     +columns(4)
+    +leader(2, 13px)
     text-align: left
     font-style: italic
-    +adjust-font-size-to(12px, 0.5, 16px)
-    color: #5e594f
+    +adjust-font-size-to(13px, 1, 16px)
+    color: darken(#5e594f, 10%)
     +text-shadow(0 1px 1px rgba(255,255,255,0.7))
-    p
-      +trailer(1, 12px)
-      margin-top: 0
   section:last-of-type
-    +columns(12)
+    +columns(12, -20px)
+    padding: 0 10px
     background: rgba(255,255,255,0.4)
     +border-radius(8px)
     color: #655f54
+    h1
+      +adjust-font-size-to(48px, 1, 16px)
+      color: #75afa5
+      margin: 0
+      padding: 0
+      +padding-leader(1, 48px)
+      font-weight: normal
+    p
+      +leader
+      margin-bottom: 0

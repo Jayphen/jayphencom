@@ -10,3 +10,8 @@
 
     #wrapper(role = "main")
       =yield
+    
+    %script(src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js")
+    %script(src="jquery.tweetable.min.js")
+    :javascript
+      $('#content-and-love section:first').html('<div>&nbsp;</div>').tweetable({'limit': 3});
